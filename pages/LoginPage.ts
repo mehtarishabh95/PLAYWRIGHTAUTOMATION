@@ -1,9 +1,9 @@
 import { Locator, Page } from "@playwright/test";
 
-export class LoginPage{//export So this class can be used in any other class.
+export class LoginPage{
 
-    readonly page:Page;//Page is from playwright/test.. directly import  ho gya
-    readonly userNameEdt:Locator;//comes form playwright/test
+    readonly page:Page;
+    readonly userNameEdt:Locator;
     readonly passwordEdt:Locator;
     readonly loginBtn:Locator;
     readonly loginErrorMessage:Locator;
@@ -26,10 +26,8 @@ export class LoginPage{//export So this class can be used in any other class.
      * To Launch application.
      */
     async goToOrangeHrm(){
-        await this.page.goto(`${process.env.BASE_URL}web/index.php/auth/login`);//this returns promice so we need await and due to await we need async. and $ to concatinate base url
-        //we can use single cot or double but need consistency.
+        await this.page.goto(`${process.env.BASE_URL}web/index.php/auth/login`);
     }
-
     /**
      * To Login to application.
      */

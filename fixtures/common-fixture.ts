@@ -6,8 +6,7 @@ type commonFixtureType={
 }
 
 export const test =basetest.extend<commonFixtureType>({
-    commonUtils:async({},use)=>{//commonUtils k liye koi fixture ki jrurat nhi h isliye humne empty object pass kiya hai
+    commonUtils:async({},use)=>{
         use(new CommonUtils())  
-        //ek trh se return ki jagah ise use kr rhe h
-        //use(new CommonUtils())  //yeh line humne isliye likhi h taki hum CommonUtils class k methods ko test me use kr ske
+    }   
 })
